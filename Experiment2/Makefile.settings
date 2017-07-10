@@ -1,0 +1,57 @@
+#File: Makefile
+#Project: RLGlue framework for B659-Reinforcement Learning spring 2017
+#Purpose: Used for setting compile settings.
+#Author: Adam White, Matthew Schlegel
+#Last Modified By: Matthew Schlegel
+#Modified On: Jan 3, 2017
+
+
+###################################
+###################################
+#IMPORTANT
+
+# Update these for your computer. (Below example is for macOS: Sierra and also works on SILO/SHARKS)
+# Include points to where your included files are such as GSL.
+# LIBS is library flags to inclue in compilation.
+# NOTE: Please only use gsl (GNU Scientific Library https://www.gnu.org/software/gsl) as a linear algebra library.
+
+INCLUDE = -I/opt/local/include
+LIBS = -L/opt/local/lib -lgsl -lgslcblas -lm
+
+#Change this to add the files you need to compile. (Your added files while doing homework.)
+FILES = SimpleEnv.cxx SimpleAgent.cxx SimpleExp.cxx utils.c
+# FILES = SimpleEnv.cxx ParameterSweepAgent.cxx ParameterSweepExp.cxx utils.c
+
+###################################
+###################################
+
+###################################
+# Change this if you want to update where your files are located. This only allows for header and source to be in the same folder.
+#Where the .o files are placed. (Don't place anything important in here as make clean will destroy the entire folder.)
+BIN = bin/
+
+#Where your sorce files are. (Must End in '/')
+SRC = ./
+
+#Change if you want a seperate build directory. (Must End in '/')
+BUILD = ./
+
+#Name of the resulting executable.
+PROG = RL_Exp
+
+###################################
+
+###################################
+#Here you change your default compiler type. This can also be done on the command line.
+
+#cpp
+#language_selection ?=cpp
+#c
+language_selection ?= c
+
+CC ?= gcc
+PP ?= g++
+
+EXTRA_CPPFLAGS := -std=c++11 -g
+
+###################################

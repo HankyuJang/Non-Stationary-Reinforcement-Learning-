@@ -6,6 +6,7 @@ In the project, I introduce Bus Gridworld, composed of bus route and walking pat
 
 Please view the "A Comparative Study of Reinforcement Learning Agents on Non-Stationary Bus Schedule.pdf" for details.
 
+If you want to reproduce the results, simply clone the repository then execute two bash scripts: Experiment1/EXPERIMENT1.sh and Experiment2/EXPERIMENT2.sh 
 -----
 
 ## Bus Gridworld
